@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -9,12 +10,50 @@
     */
 
     //ENTRADA
+    let mensagem = " ";
+    let filmes = Number(prompt(`Quantos filmes você deseja cadastrar?`))
+    let drama = [];
+    let comedia = [];
+    let romance = [];
 
     
     //PROCESSAMENTO
+    for(perguntas = 1; perguntas <=filmes; perguntas ++){
+        let genero = prompt (`Qual gênero de filme você deseja cadastrar? C - Comédia; D - Drama; R - Romance;`).toUpperCase().trim();
+        let nomes = prompt(`Qual o nome do filme?`).trim()
+        if(genero == "C"){
+            comedia.push(nomes)
+        }
+        else if(genero == "D"){
+            drama.push(nomes)
+        }
+        else if(genero == "R"){
+            romance.push(nomes)
+        }
+    }
     
     
     //SAÍDA
+    switch(comedia.includes(comedia[0])){
+        case true: mensagem = mensagem + `Comédia: ${comedia.join("; ")}`
+        break;
+        default: mensagem = mensagem;
+        break;
+    }
+    switch(romance.includes(romance[0])){
+        case true: mensagem = mensagem + ` Romance: ${romance.join("; ")}`
+        break;
+        default: mensagem = mensagem;
+        break;
+    }
+    switch(drama.includes(drama[0])){
+        case true: mensagem = mensagem + ` Drama: ${drama.join("; ")}`
+        break;
+        default: mensagem = mensagem;
+        break;
+    }
+    alert(mensagem)
+
     
     
 </script>
