@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
@@ -8,12 +9,21 @@
     */
 
     //ENTRADA
+    let pessoas = Number(prompt(`Quantas pessoas serão medidas?`));
+    let alturas = [];
 
     
     //PROCESSAMENTO
+    for(let i =1; i <= pessoas; i++){
+        let dados = Number(prompt(`Qual a altura da pessoa?`).replace(",", "."))
+        alturas.push(dados)
+    }
+    alturas.sort((a,b) => a - b);
+
     
     
     //SAÍDA
+    alert(`A menor altura é ${alturas[0].toFixed(2)} \n A maior altura é ${alturas[alturas.length-1].toFixed(2)} `)
     
 
 </script>

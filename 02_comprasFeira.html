@@ -1,25 +1,55 @@
+<meta charset="UTF-8">
 <script>
     //PROBLEMA
     /*
     Peça para o feirante informar a quantia de itens que foram vendidos de cada produto.
     Considere que os itens que comercializa e os seus respectivos preços, são:
-    - Tomate: R$ 3,90 (Kg)
-    - Batata: R$ 3,40 (Kg)
-    - Batata-Doce: R$ 4,70 (Kg)
-    - Alface: R$ 1,50 (Und)
-    - Cebola: R$ 2,90 (Kg)
-    - Cebolinha: R$ 1,40 (Und)
-    - Beterraba: R$ 4,10 (Kg)
+    Tomate: R$ 3,90 (Kg)
+    Batata: R$ 3,40 (Kg)
+    Batata-Doce: R$ 4,70 (Kg)
+    Alface: R$ 1,50 (Und)
+    Cebola: R$ 2,90 (Kg)
+    Cebolinha: R$ 1,40 (Und)
+    Beterraba: R$ 4,10 (Kg)
 
     Após o usuário informar a quantia vendida para cada item, calcule e apresente o faturamento do feirante.
     */
 
     //ENTRADA
+    let vendidos = Number(prompt(`Informe quantos itens foram vendidos`));
+    let itens = "";
+    let custo = 0;
+
+    
+    for(i = 1; i <= vendidos; i++){
+        itens = prompt(`Qual item foi vendido? \n T - Tomate: R$ 3,90 (Kg) \n B - Batata: R$ 3,40 (Kg) \n D - Batata-Doce: R$ 4,70 (Kg) \n A - Alface: R$ 1,50 (Und) \n C - Cebola: R$ 2,90 (Kg) \n N - Cebolinha: R$ 1,40 (Und) \n R - Beterraba: R$ 4,10 (Kg)`).toUpperCase().trim();
+        switch(itens){
+            case "T": custo = custo+3.9
+            break;
+            case "B": custo = custo+3.4
+            break;
+            case "D": custo = custo+4.7
+            break;
+            case "A": custo = custo+1.5
+            break;
+            case "C": custo = custo+2.9
+            break;
+            case "N": custo = custo+1.4
+            break;
+            case "R": custo = custo+4.1
+            break;
+            default:
+            break;
+            
+        }
+    }
+    
 
     
     //PROCESSAMENTO
     
     
     //SAÍDA
+    alert(`O seu faturamento é de R$${custo.toFixed(2)}`.replace(".", ","))
     
 </script>
