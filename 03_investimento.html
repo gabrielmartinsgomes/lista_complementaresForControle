@@ -11,13 +11,13 @@
     //ENTRADA
     let renda = 100;
     for(let i = 1; i<= 96;i++){
-        renda = (renda*1.018) + 100
+        renda = (renda*1.018)+ 100
         switch(i){
-            case 24: alert(`Em 24 meses você teve um total de R$${renda.toFixed(2)} recebidos \n E teve um lucro de R$${(renda-(i*100)).toFixed(2)}`.replace(".", ","));
+            case 24: alert(`Em 24 meses você teve um total de R$${renda.toFixed(2)} investidos \n E teve um lucro de R$${(renda-(i*100)).toFixed(2)}`.replace(".", ","));
             break;
-            case 48: alert(`Em 48 meses você teve um total de R$${renda.toFixed(2)} recebidos \n E teve um lucro de R$${(renda-(i*100)).toFixed(2)}`.replace(".", ","));
+            case 48: alert(`Em 48 meses você teve um total de R$${renda.toFixed(2)} investidos \n E teve um lucro de R$${(renda-(i*100)).toFixed(2)}`.replace(".", ","));
             break;
-            case 96: alert(`Em 96 meses você teve um total de R$${renda.toFixed(2)} recebidos \n E teve um lucro de R$${(renda-(i*100)).toFixed(2)}`.replace(".", ","));
+            case 96: alert(`Em 96 meses você teve um total de R$${renda.toFixed(2)} investidos \n E teve um lucro de R$${(renda-(i*100)).toFixed(2)}`.replace(".", ","));
             break;
             default:
             break;
