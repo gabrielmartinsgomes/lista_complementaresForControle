@@ -8,12 +8,24 @@
     */
 
     //ENTRADA
-
+    let listaDeNumeros = [4, 8, 12, 35, 78, 83, 5, 22, 49, 95];
+    let menor50 = [];
+    let maior50 = [];
     
     //PROCESSAMENTO
+    for(let i = 1; i <= listaDeNumeros.length; i++){
+        if(listaDeNumeros > 50){
+            maior50.push(listaDeNumeros);
+        }
+        else{
+            menor50.push(listaDeNumeros);
+        }
+    }
     
     
     //SAÍDA
+    alert(`Números maiores que 50: ${maior50}`);
+    alert(`Números menores que 50: ${menor50}`);
     
 
 </script>

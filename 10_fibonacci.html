@@ -6,14 +6,16 @@
     Pergunte ao usuário quantos números deseja adicionar na sequência de fibonacci.
     Apresente a lista ao final do programa.
     */
-
+   
     //ENTRADA
-
-    
+    let fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+    let quantidade = Number(prompt(`Quantos números deseja adicionar na sequência de fibonacci`))
+    let adicionar = 0;
     //PROCESSAMENTO
-    
-    
+    for(let i = 1; i <= quantidade; i++){
+        adicionar = fibonacci[fibonacci.length-1] + fibonacci[fibonacci.length-2];
+        fibonacci.push(adicionar)
+    }
     //SAÍDA
-    
-
+    alert(fibonacci.join(`, `))
 </script>
